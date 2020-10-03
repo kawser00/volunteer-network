@@ -1,11 +1,25 @@
 import React from 'react';
 import './App.css';
+import Home from './Compounds/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-danger">hello</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+      </Switch>
+
+    </Router>
   );
 }
 

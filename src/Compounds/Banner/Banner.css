@@ -1,0 +1,18 @@
+.form-style {
+  margin: 55px auto;
+  text-align: center;
+}
+
+.searchBox {
+  border-radius: 10px;
+  padding: 10px 25px;
+  border: 1px solid gray;
+  width: 30%;
+  background: #f4f4f4;
+}
+
+.searchBtn {
+  padding: 10px 30px;
+  right: 430px;
+  border-radius: 0px 10px 10px 0px;
+}
