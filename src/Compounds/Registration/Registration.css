@@ -1,0 +1,15 @@
+.form-style {
+  border: 1px solid gray;
+  padding: 40px;
+}
+
+input.form-control {
+  border: none;
+  border-bottom: 1px solid #c1baba;
+  padding: 6px 0px;
+  font-weight: 600;
+}
+
+input.form-control:focus {
+  box-shadow: none;
+}

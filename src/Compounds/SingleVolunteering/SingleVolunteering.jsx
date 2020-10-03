@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SingleVolunteering = (props) => {
-  const { img, title, color } = props.volunteeringData
+  const { img, title, color, key } = props.volunteeringData
   return (
     <div className="col-md-3">
-      <Link to = "/">
-        <figure className="figure position-relative">
+      <Link to = {"/registration/"+key}>
+        <figure className="figure position-relative fig-bg">
           <img src={img} className="figure-img img-fluid rounded" alt=""></img>
           {
             <figcaption className={

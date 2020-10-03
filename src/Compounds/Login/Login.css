@@ -1,0 +1,8 @@
+.logIn {
+  width: 425px;
+  border-radius: 20px;
+  margin: auto;
+  border: 1px solid #b9b9b9;
+  padding: 10px;
+  cursor: pointer;
+}

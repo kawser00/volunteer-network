@@ -24,3 +24,7 @@
 .red {
   background: #FF7044;
 }
+
+.fig-bg:hover {
+  opacity: 0.7;
+}

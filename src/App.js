@@ -6,6 +6,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Registration from './Compounds/Registration/Registration';
+import Login from './Compounds/Login/Login';
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home></Home>
+        </Route>
+        <Route path="/registration/:key">
+          <Registration></Registration>
+        </Route>
+        <Route path="/login">
+          <Login></Login>
         </Route>
       </Switch>
 

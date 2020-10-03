@@ -24,12 +24,11 @@ const Header = () => {
         <Link to="/" className="nav-link">Blog</Link>
       </li>
       <li className="nav-item">
-        <button className="btn btn-primary head-btn">Register</button>
+      <Link to="/registration"><button className="btn btn-primary head-btn">Register</button></Link>
       </li>
       <li className="nav-item">
         <button className="btn btn-dark head-btn">Admin</button>
       </li>
-      
     </ul>
 </nav>
     </div>
