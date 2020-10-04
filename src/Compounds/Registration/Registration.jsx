@@ -1,38 +1,76 @@
 import React from 'react';
 import './Registration.css';
 import logo from '../../logos/logo.png'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import fakeData from '../Volunteering/VolunteeringData'
+import { useForm } from "react-hook-form";
 
 const Registration = () => {
-  const {key} = useParams()
+  const history = useHistory();
+  const { key } = useParams()
   const [volunteeringData] = useState(fakeData)
-  const volunteerItem = volunteeringData.find (data => data.key === key)
+  const volunteerItem = volunteeringData.find(data => data.key === key)
+
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = data => {
+    console.log('click');
+    console.log(data)
+
+    fetch('http://localhost:5000/registerData', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data) {
+        history.push("/home")
+      }
+    })
+  };
+
+  // const handleUserData = () => {
+  //   const data = {}
+  //   fetch('http://localhost:5000/addUserData', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-type': 'application/json; charset=UTF-8',
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data)
+  //     })
+  // }
 
   return (
     <div>
       <div className="container-fluid text-center my-5">
         <Link to="/home"><img className="mb-5" height="60" src={logo} alt="" /></Link>
-        <div className="w-50 form-style m-auto">
+        <div className="w-50 box-style m-auto">
           <h3 className="font-weight-bold text-left mb-5">Register as a Volunteer</h3>
-          <form className="">
-          <div className="form-group">
-              <input type="text" className="form-control"  placeholder="Full Name" required />
+
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <input name="name" ref={register} type="text" className="form-control" placeholder="Full Name" required />
             </div>
             <div className="form-group">
-              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or Email" required />
+              <input name="email" ref={register} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or Email" required />
             </div>
             <div className="form-group">
-              <input type="date" className="form-control"  placeholder="Date" required />
+              <input name="date" ref={register} type="date" className="form-control" placeholder="Date" required />
             </div>
             <div className="form-group">
-              <input type="text" className="form-control"  placeholder="Description" required />
+              <input name="description" ref={register} type="text" className="form-control" placeholder="Description" required />
             </div>
             <div className="form-group">
-              <input type="text" className="form-control font-weight-bold"  defaultValue={volunteerItem.title} disabled />
+              <input name="title" ref={register} type="text" className="form-control font-weight-bold" defaultValue={volunteerItem.title} />
             </div>
-            
+
             <button type="submit" className="btn btn-primary w-100 my-4">Registration</button>
           </form>
         </div>
