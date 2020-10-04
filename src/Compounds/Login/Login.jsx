@@ -40,16 +40,16 @@ const Login = () => {
   }
 
   // //********Google sign out */
-  firebase.auth().signOut()
-  .then(result => {
-    const signInUser = {
-      name: '',
-      email: '',
-      isSignIn: false,
-    }
-    setLoggedInUser(signInUser)
-  })
-  .catch(error => console.log(error));
+  // firebase.auth().signOut()
+  // .then(result => {
+  //   const signInUser = {
+  //     name: '',
+  //     email: '',
+  //     isSignIn: false,
+  //   }
+  //   setLoggedInUser(signInUser)
+  // })
+  // .catch(error => console.log(error));
 
 
 

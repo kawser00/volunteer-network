@@ -28,14 +28,15 @@ const Header = () => {
           </li>
           {
             loggedInUser.isSignIn ?
-            <li onClick ={()=> setLoggedInUser({isSignIn:false})} style={{ cursor: 'pointer' }}className="nav-item font-weight-bold">{loggedInUser.name}</li>
+            // onClick ={()=> setLoggedInUser({isSignIn:false})} 
+            <li style={{ cursor: 'pointer' }}className="nav-item font-weight-bold">{loggedInUser.name}</li>
               :
               <div className="d-flex">
                 <li className="nav-item">
                   <Link to="/registration"><button className="btn btn-primary head-btn">Register</button></Link>
                 </li>
                 <li className="nav-item">
-                  <button className="btn btn-dark head-btn">Admin</button>
+                  <Link to="/admin"><button className="btn btn-dark head-btn">Admin</button></Link>
                 </li>
               </div>
           }

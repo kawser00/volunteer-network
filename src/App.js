@@ -13,6 +13,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import NoMatch from './Compounds/NoMatch/NoMatch';
 import RegisteredItem from './Compounds/Registration/RegisteredItem/RegisteredItem';
+import AdminPage from './Compounds/AdminPage/AdminPage';
 
 
 export const UserContext = createContext()
@@ -48,6 +49,9 @@ function App() {
         </Route>
         <Route path="/item">
           <RegisteredItem></RegisteredItem>
+        </Route>
+        <Route path="/admin">
+          <AdminPage></AdminPage>
         </Route>
         <Route path="*">
           <NoMatch></NoMatch>
