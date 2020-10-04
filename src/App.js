@@ -19,7 +19,7 @@ export const UserContext = createContext()
 
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({isSignIn: false})
   const [volunteeringData, setVolunteeringData] = useState([])
 
   useEffect(() => {
@@ -40,9 +40,9 @@ function App() {
         <Route exact path="/">
           <Home></Home>
         </Route>
-        <Route path="/registration/:key">
+        <PrivateRoute path="/registration/:key">
           <Registration></Registration>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
           <Login></Login>
         </Route>

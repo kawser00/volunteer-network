@@ -27,6 +27,7 @@ const Login = () => {
         const signInUser = {
           name: displayName,
           email: email,
+          isSignIn: true,
         }
         setLoggedInUser(signInUser)
         history.replace(from);
@@ -38,13 +39,27 @@ const Login = () => {
       });
   }
 
+  // //********Google sign out */
+  firebase.auth().signOut()
+  .then(result => {
+    const signInUser = {
+      name: '',
+      email: '',
+      isSignIn: false,
+    }
+    setLoggedInUser(signInUser)
+  })
+  .catch(error => console.log(error));
+
+
+
   return (
     <div className="container-fluid text-center my-5">
       <Link to="/home"><img className="mb-5" height="60" src={logo} alt="" /></Link>
       <div style={{ height: '70vh' }} className=" w-50 box-style m-auto d-flex align-items-center justify-content-center">
         <div className="">
           <h3 className="font-weight-bold text-center mb-4">Login With</h3>
-          <div onClick={googleSignIn} className="logIn d-flex">
+          <div style={{ cursor: 'pointer' }} onClick={googleSignIn} className="logIn d-flex">
             <span><img style={{ width: '23px' }} src={googleImg} alt="" /></span>
             <span className="text-dark font-weight-bold m-auto">Continue with Google</span>
           </div>

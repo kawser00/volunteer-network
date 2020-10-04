@@ -8,6 +8,7 @@ import { UserContext } from '../../App';
 import { useEffect } from 'react';
 
 const Registration = () => {
+  const {loggedInUser} = useContext(UserContext)
   const {volunteeringData} = useContext(UserContext)
   const [volunteer, setVolunteer] = useState(null)
   const history = useHistory();
@@ -48,10 +49,10 @@ const Registration = () => {
             volunteer &&
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
-              <input name="name" ref={register} type="text" className="form-control" placeholder="Full Name" required />
+              <input name="name" defaultValue={loggedInUser.name} ref={register} type="text" className="form-control" placeholder="Full Name" required />
             </div>
             <div className="form-group">
-              <input name="email" ref={register} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or Email" required />
+              <input defaultValue={loggedInUser.email} name="email" ref={register} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or Email" required />
             </div>
             <div className="form-group">
               <input name="date" ref={register} type="date" className="form-control" placeholder="Date" required />
@@ -60,7 +61,7 @@ const Registration = () => {
               <input name="description" ref={register} type="text" className="form-control" placeholder="Description" required />
             </div>
             <div className="form-group">
-              <input name="title" ref={register} type="text" className="form-control font-weight-bold" defaultValue={volunteer.title} />
+              <input name="title" ref={register} type="text" className="form-control" defaultValue={volunteer.title} />
             </div>
 
             <button type="submit" className="btn btn-primary w-100 my-4">Registration</button>
