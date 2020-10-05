@@ -39,7 +39,7 @@ const Login = () => {
       });
   }
 
-  // //********Google sign out */
+  //********Google sign out */
   // firebase.auth().signOut()
   // .then(result => {
   //   const signInUser = {
