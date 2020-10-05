@@ -5,6 +5,7 @@ import logo from '../../logos/logo.png';
 import userIcon from '../../logos/users-alt.png';
 import plusIcon from '../../logos/plus.png';
 import AdminPageData from '../AdminPageData/AdminPageData';
+import Spinner from '../../logos/spinner2.gif'
 
 const AdminPage = () => {
   const [registeredData, setRegisteredData] = useState()
@@ -15,6 +16,7 @@ const AdminPage = () => {
       .then(res => res.json())
       .then(data => {
         setRegisteredData(data)
+        document.getElementById('spinner2').style.display='none';
       })
   }, [])
 
@@ -44,6 +46,7 @@ const AdminPage = () => {
               <li className="">Action</li>
             </ul>
             <div className="">
+                 <img id="spinner2" src={Spinner} alt=""/>
               {
                 registeredData &&
                 registeredData.map(userData => <AdminPageData userData={userData} key={userData._id} volunteerData={volunteerData} ></AdminPageData>)

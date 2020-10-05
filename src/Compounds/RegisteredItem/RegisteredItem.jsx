@@ -2,6 +2,8 @@ import React, {useEffect } from 'react';
 import { useState } from 'react';
 import Header from '../Header/Header';
 import SingleItem from '../SingleItem/SingleItem';
+import Spinner from '../../logos/spinner1.gif'
+
 
 const RegisteredItem = () => {
   const [registeredData, setRegisteredData] = useState()
@@ -11,6 +13,7 @@ const RegisteredItem = () => {
     .then(res => res.json())
     .then(data => {
       setRegisteredData(data)
+      document.getElementById('spinner1').style.display='none';
     })
   }, [])
 
@@ -24,6 +27,7 @@ const RegisteredItem = () => {
       <Header />
       <div className="row my-5">
         <div className="d-flex flex-wrap w-75 m-auto justify-content-between">
+        <img id="spinner1" src={Spinner} alt=""/>
         {
           registeredData &&
           registeredData.map(singleRegisterData => <SingleItem singleRegisterData={singleRegisterData} key={singleRegisterData._id} volunteerData={volunteerData}></SingleItem>)
