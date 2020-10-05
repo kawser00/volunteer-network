@@ -12,7 +12,7 @@ import PrivateRoute from './Compounds/PrivateRoute/PrivateRoute';
 import { createContext } from 'react';
 import { useState } from 'react';
 import NoMatch from './Compounds/NoMatch/NoMatch';
-import RegisteredItem from './Compounds/Registration/RegisteredItem/RegisteredItem';
+import RegisteredItem from './Compounds/RegisteredItem/RegisteredItem';
 import AdminPage from './Compounds/AdminPage/AdminPage';
 
 

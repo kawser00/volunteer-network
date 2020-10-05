@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { useState } from 'react';
-import { UserContext } from '../../../App';
-import Header from '../../Header/Header';
-import SingleItem from '../../SingleItem/SingleItem';
+import { UserContext } from '../../App';
+import Header from '../Header/Header';
+import SingleItem from '../SingleItem/SingleItem';
 
 const RegisteredItem = () => {
   const {volunteeringData} = useContext(UserContext)
