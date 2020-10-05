@@ -39,22 +39,8 @@ const Login = () => {
       });
   }
 
-  //********Google sign out */
-  // firebase.auth().signOut()
-  // .then(result => {
-  //   const signInUser = {
-  //     name: '',
-  //     email: '',
-  //     isSignIn: false,
-  //   }
-  //   setLoggedInUser(signInUser)
-  // })
-  // .catch(error => console.log(error));
-
-
-
   return (
-    <div className="container-fluid text-center py-5">
+    <div className="container-fluid text-center my-5">
       <Link to="/home"><img className="mb-5" height="60" src={logo} alt="" /></Link>
       <div style={{ height: '70vh' }} className=" w-50 box-style m-auto d-flex align-items-center justify-content-center">
         <div className="">
@@ -70,7 +56,6 @@ const Login = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -15,3 +15,11 @@ li.nav-item.font-weight-bold {
   font-size: 20px;
   padding: 18px 0px;
 }
+
+.link-style {
+  color: black;
+}
+.link-style:hover {
+  color: black;
+  text-decoration: none;
+}

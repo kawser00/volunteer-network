@@ -1,10 +1,9 @@
 .card-style {
-  padding: 30px 20px;
-  margin: 1%;
   border-radius: 10px;
   box-shadow: 2px 2px 4px grey;
-  width: 47%;
   background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .img-size {

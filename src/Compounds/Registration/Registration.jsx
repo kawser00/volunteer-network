@@ -21,9 +21,6 @@ const Registration = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
-    console.log('click');
-    console.log(data)
-
     fetch('http://localhost:5000/addRegisterData', {
       method: 'POST',
       headers: {

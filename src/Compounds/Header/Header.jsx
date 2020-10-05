@@ -28,8 +28,7 @@ const Header = () => {
           </li>
           {
             loggedInUser.isSignIn ?
-            // onClick ={()=> setLoggedInUser({isSignIn:false})} 
-            <li style={{ cursor: 'pointer' }}className="nav-item font-weight-bold">{loggedInUser.name}</li>
+            <Link className="link-style" to="/home"><li onClick ={()=> setLoggedInUser({})}  style={{ cursor: 'pointer' }}className="nav-item font-weight-bold">{loggedInUser.name}</li></Link>
               :
               <div className="d-flex">
                 <li className="nav-item">

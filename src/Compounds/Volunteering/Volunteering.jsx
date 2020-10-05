@@ -4,15 +4,15 @@ import SingleVolunteering from '../SingleVolunteering/SingleVolunteering';
 import { UserContext } from '../../App';
 
 const Volunteering = () => {
-  const {volunteeringData} = useContext(UserContext)
-  
+  const { volunteeringData } = useContext(UserContext)
+
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="d-flex flex-wrap">
           {
             volunteeringData.map(volunteeringData => <SingleVolunteering volunteeringData={volunteeringData}
-            key={volunteeringData.key}></SingleVolunteering>)
+              key={volunteeringData.key}></SingleVolunteering>)
           }
         </div>
       </div>
