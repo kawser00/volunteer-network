@@ -20,45 +20,48 @@ export const UserContext = createContext()
 
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({isSignIn: false})
+  const [loggedInUser, setLoggedInUser] = useState({ isSignIn: false })
   const [volunteeringData, setVolunteeringData] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:5000/data')
-    .then(res => res.json())
-    .then(data => {
-      setVolunteeringData(data)
-    })
+      .then(res => res.json())
+      .then(data => {
+        setVolunteeringData(data)
+      })
   }, [setVolunteeringData])
 
   return (
-    <UserContext.Provider value={{loggedInUser, setLoggedInUser, volunteeringData, setVolunteeringData}}>
-    <Router>
-      <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <PrivateRoute path="/registration/:key">
-          <Registration></Registration>
-        </PrivateRoute>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/item">
-          <RegisteredItem></RegisteredItem>
-        </Route>
-        <Route path="/admin">
-          <AdminPage></AdminPage>
-        </Route>
-        <Route path="*">
-          <NoMatch></NoMatch>
-        </Route>
-      </Switch>
-    </Router>
-    </UserContext.Provider>
+    <div style={{ background: '#F8FAFC' }}>
+      <UserContext.Provider value={{ loggedInUser, setLoggedInUser, volunteeringData, setVolunteeringData }}>
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <PrivateRoute path="/registration/:key">
+              <Registration></Registration>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/item">
+              <RegisteredItem></RegisteredItem>
+            </Route>
+            <Route path="/admin">
+              <AdminPage></AdminPage>
+            </Route>
+            <Route path="*">
+              <NoMatch></NoMatch>
+            </Route>
+          </Switch>
+        </Router>
+      </UserContext.Provider>
+    </div>
+
   );
 }
 

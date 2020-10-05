@@ -1,8 +1,12 @@
 .card-style {
-  padding: 19px;
-  border: 1px solid gray;
+  padding: 30px 20px;
   margin: 1%;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 4px grey;
   width: 47%;
+  background: #fff;
+}
+
+.img-size {
+  width: 125px;
 }

@@ -41,7 +41,7 @@ const Registration = () => {
 
   return (
     <div>
-      <div className="container-fluid text-center my-5">
+      <div className="container-fluid text-center py-5">
         <Link to="/home"><img className="mb-5" height="60" src={logo} alt="" /></Link>
         <div className="w-50 box-style m-auto">
           <h3 className="font-weight-bold text-left mb-5">Register as a Volunteer</h3>
