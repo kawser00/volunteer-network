@@ -21,7 +21,7 @@ const Registration = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5000/addRegisterData', {
+    fetch('https://enigmatic-river-92376.herokuapp.com/addRegisterData', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

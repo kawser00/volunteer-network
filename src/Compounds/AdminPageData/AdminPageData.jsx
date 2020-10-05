@@ -7,7 +7,7 @@ const AdminPageData = (props) => {
 
   function deleteData(id) {
     props.volunteerData(id)
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://enigmatic-river-92376.herokuapp.com/delete/${id}`, {
       method: 'DELETE'
     })
     .then(res => res.json())

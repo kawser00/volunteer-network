@@ -7,7 +7,7 @@ const RegisteredItem = () => {
   const [registeredData, setRegisteredData] = useState()
 
   useEffect(() => {
-    fetch('http://localhost:5000/registerData')
+    fetch('https://enigmatic-river-92376.herokuapp.com/registerData')
     .then(res => res.json())
     .then(data => {
       setRegisteredData(data)

@@ -25,7 +25,7 @@ function App() {
   const [volunteeringData, setVolunteeringData] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:5000/data')
+    fetch('https://enigmatic-river-92376.herokuapp.com/data')
       .then(res => res.json())
       .then(data => {
         setVolunteeringData(data)

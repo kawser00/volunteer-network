@@ -11,7 +11,7 @@ const AdminPage = () => {
   const [isRegister, setIsRegister] = useState(true)
 
   useEffect(() => {
-    fetch('http://localhost:5000/registerData')
+    fetch('https://enigmatic-river-92376.herokuapp.com/registerData')
       .then(res => res.json())
       .then(data => {
         setRegisteredData(data)
