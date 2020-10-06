@@ -58,12 +58,12 @@ const AdminPage = () => {
             <form>
               <div className="form-row">
                 <div className="form-group col-md-6">
-                  <label>Email</label>
-                  <input type="text" className="form-control" placeholder="First name" />
+                  <label>Event Title</label>
+                  <input type="text" className="form-control" placeholder="Event title" />
                 </div>
                 <div className="form-group col-md-6">
-                  <label>Password</label>
-                  <input type="password" className="form-control" placeholder="Password" />
+                  <label>Event Date</label>
+                  <input type="date" className="form-control"  />
                 </div>
                 <div className="form-group">
                   <label>Description:</label>

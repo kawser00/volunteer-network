@@ -25,8 +25,8 @@ const RegisteredItem = () => {
   return (
     <div className="container-fluid">
       <Header />
-      <div className="row my-5">
-        <div className="d-flex flex-wrap w-75 m-auto justify-content-between">
+      <div className="my-5">
+        <div className="row d-flex flex-wrap m-auto justify-content-around">
         <img id="spinner1" src={Spinner} alt=""/>
         {
           registeredData &&

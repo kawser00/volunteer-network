@@ -29,7 +29,7 @@ const SingleItem = (props) => {
     <>
       {
         singleUser && userData &&
-        <div className="card-style col-md-6 d-flex">
+        <div className="card-style col-md-5 d-flex">
             <img className="img-fluid rounded img-size mr-3" src={userData.img} alt="" />
           <div className="">
             <h4>{title}</h4>
