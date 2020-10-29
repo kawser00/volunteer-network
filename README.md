@@ -1,6 +1,6 @@
 # Volunteer Network
 ### A Volunteer Management web Application 
-It's a single page web application. This web app has an admin and user panel and many other features.
+It's a full stack single page web application. This web app has an admin and user panel and many other features.
 
 [Live Website](https://volunteer-network-app.netlify.app/) | [Back-end Repository](https://github.com/kawsar00/volunteer-network-server)
 
