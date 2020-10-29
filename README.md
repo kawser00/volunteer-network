@@ -21,7 +21,6 @@ It's a full stack single page web application. This web app has an admin and use
 ### Front-end Thechnology 
 * React.js
 * React-hook-form
-* React-slick-carousal
 * React-router
 * Context API
 * Firebase Athuentication 
