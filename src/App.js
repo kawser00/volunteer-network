@@ -25,7 +25,7 @@ function App() {
   const [volunteeringData, setVolunteeringData] = useState([])
 
   useEffect(() => {
-    fetch('https://enigmatic-river-92376.herokuapp.com/data')
+    fetch('https://volunteer-network-server-jv30.onrender.com/data')
       .then(res => res.json())
       .then(data => {
         setVolunteeringData(data)
